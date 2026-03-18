@@ -1,0 +1,20 @@
+{
+    "report_generated": "2026-03-17T22:39:15.633693",
+    "file": "/home/amruta/malicious_binaries/76f9f2ceca29648448664c901a5de2432ed044f2056aa32aeaa3791cb5f9c4b5.zip",
+    "filename": "76f9f2ceca29648448664c901a5de2432ed044f2056aa32aeaa3791cb5f9c4b5.zip",
+    "hashes": {
+        "MD5": "926047fbd6c9a9da2c27a8a4f7f6afe0",
+        "SHA1": "5c98b763dc2a7e55c337942885a5fe03717d93c1",
+        "SHA256": "c5028ebcf036e7f61fd2a556e3063ffa8e6fa05833de26d547846dafb5f90d25",
+        "SHA512": "ad90d86dcda56ffbc31b4a564e79467db0bd18468d563320741b5e139cb3fff7a7b51e0a8a81f5f181c352f476c21cdc9b50c57fa668d5fb564a43c250dffb47"
+    },
+    "suspicious_imports": {
+        "total_hits": 1,
+        "categories_flagged": 1,
+        "matches": {
+            "Obfuscation / Injection": [
+                "Xor,$"
+            ]
+        }
+    }
+}

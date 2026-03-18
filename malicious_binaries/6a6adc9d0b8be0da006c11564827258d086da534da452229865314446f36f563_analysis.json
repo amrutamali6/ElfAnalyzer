@@ -1,0 +1,24 @@
+{
+    "report_generated": "2026-03-18T18:22:24.914356",
+    "file": "/home/amruta/malicious_binaries/6a6adc9d0b8be0da006c11564827258d086da534da452229865314446f36f563.zip",
+    "filename": "6a6adc9d0b8be0da006c11564827258d086da534da452229865314446f36f563.zip",
+    "hashes": {
+        "MD5": "6abb3a0112bdd19e9ac4b759ec474072",
+        "SHA1": "44566084aba9da796c2e32d9485e097c3a031077",
+        "SHA256": "0af708d56f53ba5b64114363b7cdcf26a06c828482ce61dde6690eb4e18755a8",
+        "SHA512": "9ee1417be49641ba872f826293772f2266e8b596f6d296f6d04d18756bbaf6375709be89b5811ab8bcded44c00e5beeb01f014772c75e8aefdc2abfa25c8001d"
+    },
+    "suspicious_imports": {
+        "total_hits": 3,
+        "categories_flagged": 2,
+        "matches": {
+            "Privilege Escalation": [
+                "SU, "
+            ],
+            "Persistence": [
+                "F{ |AT",
+                "{AT#^"
+            ]
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "report_generated": "2026-03-17T22:30:21.905893",
+    "file": "/home/amruta/malicious_binaries/4771b1cb3f6e33666f523f9c46b2a3d3ae83f616531376bff964be7420d7f64c.zip",
+    "filename": "4771b1cb3f6e33666f523f9c46b2a3d3ae83f616531376bff964be7420d7f64c.zip",
+    "hashes": {
+        "MD5": "9349bd76c6aff4843ef40634ae8c3a8b",
+        "SHA1": "8875a39842d6912fa5ea7f0283d4ca72ca3b8c76",
+        "SHA256": "2d97f550faec37251e6816156a5856c023424a506e39823ddf26a46a2f5c75fa",
+        "SHA512": "8a16e7bbaf686ac6e5785d8811727edb7f18c2d9777f9fc155e36a712401341a8e25bc3dd14194678d3f1a752f3b0b8d414b360f6f09f045b065fb4cb3866ae2"
+    },
+    "suspicious_imports": {
+        "total_hits": 1,
+        "categories_flagged": 1,
+        "matches": {
+            "Persistence": [
+                "a>At"
+            ]
+        }
+    }
+}
