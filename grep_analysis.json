@@ -1,0 +1,49 @@
+{
+    "report_generated": "2026-03-17T22:04:05.681420",
+    "file": "/home/amruta/benign_binaries/grep",
+    "filename": "grep",
+    "hashes": {
+        "MD5": "73c418ece870d6912c2e3855f22b957b",
+        "SHA1": "f9152cdc70e728656ac2c5e7ec187fbf3dd831a7",
+        "SHA256": "bd6686bf7a650a9717fd7e73fdb07dc63b70547a1da41bce093c56df937a66eb",
+        "SHA512": "2f3270ed81f1d029075a7b97454f0633ed84e122a9fce79a24a1e72255cc01da10ac3af8d5f28f2e8f465ee2b643bf06fc976ac0b3fca663ece832ee73fbd1e7"
+    },
+    "suspicious_imports": {
+        "total_hits": 22,
+        "categories_flagged": 5,
+        "matches": {
+            "Shell Execution": [
+                "shell",
+                "shell-always",
+                "shell-escape",
+                "shell-escape-always"
+            ],
+            "Memory Manipulation": [
+                "munmap",
+                "memmove",
+                "memset",
+                "memcpy",
+                "mmap"
+            ],
+            "Process Manipulation": [
+                "raise",
+                "signal",
+                "abort"
+            ],
+            "Keylogging / Spying": [
+                "read",
+                "                            ACTION is 'read', 'recurse', or 'skip'",
+                "                            ACTION is 'read' or 'skip'",
+                "When FILE is '-', read standard input.  With no FILE, read '.' if"
+            ],
+            "Persistence": [
+                "? at start of expression",
+                "* at start of expression",
+                "+ at start of expression",
+                "{...} at start of expression",
+                "  -U, --binary              do not strip CR characters at EOL (MSDOS/Windows)",
+                ".init"
+            ]
+        }
+    }
+}

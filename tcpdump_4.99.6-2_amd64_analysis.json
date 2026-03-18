@@ -1,0 +1,26 @@
+{
+    "report_generated": "2026-03-17T21:50:44.372929",
+    "file": "/home/amruta/benign_binaries/tcpdump_4.99.6-2_amd64.deb",
+    "filename": "tcpdump_4.99.6-2_amd64.deb",
+    "hashes": {
+        "MD5": "13b129f673646bf6b77b931253821b94",
+        "SHA1": "7bd8562842bd12cd992e5846432592502e0a3356",
+        "SHA256": "f0081d821bb7047e2dd6cec23defafc6c5dd48f4b9305de3c2e3c7485ff636bd",
+        "SHA512": "7dcf1b57e1a02cb506a3a2881c26b7799ba1a0dd357c887dd745cb0631fa2d0247e0be5ba2c3866dc0fd01d45ff655a1927561456140d9c1d4b11b413655aab2"
+    },
+    "suspicious_imports": {
+        "total_hits": 3,
+        "categories_flagged": 3,
+        "matches": {
+            "Privilege Escalation": [
+                "4;Su"
+            ],
+            "Persistence": [
+                "At}:"
+            ],
+            "Crypto / Ransomware": [
+                "+#h\\rSA"
+            ]
+        }
+    }
+}

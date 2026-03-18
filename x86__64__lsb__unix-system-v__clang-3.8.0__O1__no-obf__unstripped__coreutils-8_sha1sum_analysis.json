@@ -1,0 +1,48 @@
+{
+    "report_generated": "2026-03-17T21:55:41.873897",
+    "file": "/home/amruta/benign_binaries/x86__64__lsb__unix-system-v__clang-3.8.0__O1__no-obf__unstripped__coreutils-8.30__sha1sum",
+    "filename": "x86__64__lsb__unix-system-v__clang-3.8.0__O1__no-obf__unstripped__coreutils-8.30__sha1sum",
+    "hashes": {
+        "MD5": "9d019e6cd8c3344ce0b948b67d64ad5d",
+        "SHA1": "6909309e2789877ded4f219a790dec3ada4e74f8",
+        "SHA256": "3ecf738d31fd632c92f9a3776c2e1d1856a05f3784d6c51170861321114205a1",
+        "SHA512": "16c6b642873842a992df5cfa01be300ec5476c67c14dbf4b2f724f103aac41d9987a2715057b0dc93d92a4a42fc2f7a7e2a2bd50f05cc45823d6ab0f85858a5d"
+    },
+    "suspicious_imports": {
+        "total_hits": 21,
+        "categories_flagged": 5,
+        "matches": {
+            "Shell Execution": [
+                "A NULL argv[0] was passed through an exec system call.",
+                "shell",
+                "shell-always",
+                "shell-escape",
+                "shell-escape-always"
+            ],
+            "Memory Manipulation": [
+                "memset",
+                "memcpy",
+                "memset@@GLIBC_2.2.5",
+                "memcpy@@GLIBC_2.14"
+            ],
+            "Process Manipulation": [
+                "abort",
+                "abort@@GLIBC_2.2.5"
+            ],
+            "Keylogging / Spying": [
+                "  -b, --binary         read in binary mode",
+                "  -c, --check          read %s sums from the FILEs and check them",
+                "  -t, --text           read in text mode (default)",
+                "With no FILE, or when FILE is -, read standard input.",
+                "FAILED open or read",
+                "%s: read error",
+                "WARNING: %lu listed file could not be read",
+                "WARNING: %lu listed files could not be read"
+            ],
+            "Persistence": [
+                "Full documentation at: <%s%s>",
+                ".init"
+            ]
+        }
+    }
+}

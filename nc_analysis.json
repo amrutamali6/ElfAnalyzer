@@ -1,0 +1,79 @@
+{
+    "report_generated": "2026-03-17T21:51:47.848652",
+    "file": "/home/amruta/benign_binaries/nc",
+    "filename": "nc",
+    "hashes": {
+        "MD5": "034c4d218e4e20f3ae66ecc3e7821254",
+        "SHA1": "99bd768e3ecb09074c091aaa99d386266d664990",
+        "SHA256": "51b87b4d7f928ede6b8815cb4728843928bf35ffb1456608d308a70631bb95d7",
+        "SHA512": "a086262bd43976806902840c342540548f755125ae744be746db18c98ecb290e30c5ecf1963118d160d57774e4e5da601e2412748bac603133b71096870b3ef7"
+    },
+    "suspicious_imports": {
+        "total_hits": 50,
+        "categories_flagged": 6,
+        "matches": {
+            "Network": [
+                "getaddrinfo",
+                "bind",
+                "socket",
+                "recvfrom",
+                "listen",
+                "connect",
+                "set TCP send buffer size",
+                "getaddrinfo: %s",
+                "bind failed",
+                "connect to %s port %s (%s) %s",
+                "TCP send window %s: %s",
+                "missing socket pathname",
+                "/recv.sock",
+                "no proxy support for listen",
+                "accept",
+                "CONNECT [%s]:%d HTTP/1.0",
+                "CONNECT %s:%d HTTP/1.0",
+                "HTTP/1.0 407 ",
+                "HTTP/1.1 407 ",
+                "HTTP/1.0 200 ",
+                "HTTP/1.1 200 ",
+                "getaddrinfo for host \"%s\" port %s: %s",
+                "connect to %s (%s) port %s (%s) %s",
+                "OpenBSD netcat (Debian patchlevel 1.229-1)",
+                "Send CRLF as line-ending",
+                "Enable the debug socket option",
+                "Pass socket fd",
+                "Listen mode, for inbound connects",
+                "Shutdown the network socket after EOF on stdin",
+                "TCP send buffer length",
+                "Use UNIX domain socket",
+                "Proxy protocol: \"4\", \"5\" (SOCKS) or \"connect\"",
+                "getaddrinfo(\"%.64s\", \"%.64s\"): %s",
+                "SOCKS server cannot connect to identd on the client"
+            ],
+            "File Manipulation": [
+                "unlink",
+                "rmdir"
+            ],
+            "Memory Manipulation": [
+                "memmove",
+                "memcpy"
+            ],
+            "Process Manipulation": [
+                "signal"
+            ],
+            "Keylogging / Spying": [
+                "read",
+                "proxy read too long",
+                "proxy read",
+                "read failed (%zu/3)",
+                "read failed (%zu/4)",
+                "read failed (%zu/6)",
+                "read failed (%zu/18)",
+                "read failed (%zu/8)",
+                "Unable to read TCP MD5SIG password",
+                "Unable to read proxy passphrase"
+            ],
+            "Persistence": [
+                ".init"
+            ]
+        }
+    }
+}
