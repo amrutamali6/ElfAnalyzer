@@ -1,0 +1,31 @@
+{
+    "report_generated": "2026-03-17T21:56:22.060591",
+    "file": "/home/amruta/benign_binaries/x86__64__lsb__unix-system-v__clang-3.8.0__O1__no-obf__unstripped__util-linux-2.33__hexdump",
+    "filename": "x86__64__lsb__unix-system-v__clang-3.8.0__O1__no-obf__unstripped__util-linux-2.33__hexdump",
+    "hashes": {
+        "MD5": "07cc86817b271398df7bcc499d51c654",
+        "SHA1": "3c308fbb5d274efcd118b21435c177ba4748db69",
+        "SHA256": "29fcc44020703de1051ed4a9b92a3515916c2a175a43384ef37f25aa15df5480",
+        "SHA512": "607d7953c2f04dbc588176b8add9a9ece3bc61ec0568cadfbe8498acbca18e299f71c80f5eeedcfc9f8600fa1f0292c6aaf3a044ac9876a722ec0ac9421a63c6"
+    },
+    "suspicious_imports": {
+        "total_hits": 8,
+        "categories_flagged": 3,
+        "matches": {
+            "Memory Manipulation": [
+                "memset",
+                "memcpy",
+                "memset@@GLIBC_2.2.5",
+                "memcpy@@GLIBC_2.14"
+            ],
+            "Keylogging / Spying": [
+                "fgetc",
+                "can't read %s",
+                "fgetc@@GLIBC_2.2.5"
+            ],
+            "Persistence": [
+                ".init"
+            ]
+        }
+    }
+}

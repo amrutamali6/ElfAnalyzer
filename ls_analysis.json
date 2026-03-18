@@ -1,0 +1,73 @@
+{
+    "report_generated": "2026-03-17T22:03:31.931039",
+    "file": "/home/amruta/benign_binaries/ls",
+    "filename": "ls",
+    "hashes": {
+        "MD5": "5229649db44886ed74f9096b373032f4",
+        "SHA1": "19635a0ee8c3d1f0f7201b66ad83e192f4c8d793",
+        "SHA256": "833d6f9cf3ede2225d80eaa159ef78a141c92842a691179aec37d182cc808a5c",
+        "SHA512": "9b784e2ab979097da5c7cefaa33be5451f86f2a88603093701441530605ec52594190a29673ebe9ce8f2a96e3e3cbe6e2b11760acd63f3fc79d0f680606fa1c8"
+    },
+    "suspicious_imports": {
+        "total_hits": 40,
+        "categories_flagged": 8,
+        "matches": {
+            "Shell Execution": [
+                "Unknown system error",
+                "system.nfs4_acl",
+                "system.posix_acl_access",
+                "system.posix_acl_default",
+                "shell",
+                "shell-always",
+                "shell-escape",
+                "shell-escape-always",
+                "      --hide=PATTERN         do not list implied entries matching shell PATTERN",
+                "  -I, --ignore=PATTERN       do not list implied entries matching shell PATTERN",
+                "  -k, --kibibytes            default to 1024-byte blocks for file system usage;",
+                "                             literal, locale, shell, shell-always,",
+                "                             shell-escape, shell-escape-always, c, escape",
+                "A NULL argv[0] was passed through an exec system call."
+            ],
+            "Network": [
+                "SOCK 01;35 # socket"
+            ],
+            "File Manipulation": [
+                "LINK 01;36 # symbolic link. (If you set this to 'target' instead of a",
+                "MULTIHARDLINK 00 # regular file with more than one link",
+                "ORPHAN 40;31;01 # symlink to nonexistent file, or non-stat'able file ...",
+                "cannot read symbolic link %s",
+                "      --dereference-command-line-symlink-to-dir",
+                "                             follow each command line symbolic link",
+                "                             link, show information for the file the link",
+                "                             references rather than for the link itself",
+                "dereference-command-line-symlink-to-dir"
+            ],
+            "Memory Manipulation": [
+                "memmove",
+                "memset",
+                "memcpy"
+            ],
+            "Privilege Escalation": [
+                "SETUID 37;41 # regular file that is setuid (u+s)",
+                "SETGID 30;43 # regular file that is setgid (g+s)"
+            ],
+            "Process Manipulation": [
+                "raise",
+                "signal",
+                "abort"
+            ],
+            "Keylogging / Spying": [
+                "cannot read symbolic link %s"
+            ],
+            "Persistence": [
+                "# Below are the color init strings for the basic file types.",
+                "#NORMAL 00 # no color code at all",
+                "#FILE 00 # regular file: use no color at all",
+                "# to color below. Put the suffix, a space, and the color init string.",
+                "# init strings for separate cases, those will be honored.",
+                "  -T, --tabsize=COLS         assume tab stops at each COLS instead of 8",
+                ".init"
+            ]
+        }
+    }
+}
