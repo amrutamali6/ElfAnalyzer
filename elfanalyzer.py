@@ -8,36 +8,16 @@ import re
 import json
 import os
 from datetime import datetime
-from ElfAnalyzer import *
+
+try:
+    from ElfAnalyzer import *
+except ImportError:
+    print("[WARNING] ElfAnalyzer module not found. Some functionality may not work.")
 
 
 # ── Constants ─────────────────────────────────────────────────
 
-# Benign binaries
-#ELF_PATH = "/home/amruta/benign_binaries/nc"  # Change this to your ELF binary path
-#ELF_PATH = "/home/amruta/benign_binaries/cat"
-#ELF_PATH = "/home/amruta/benign_binaries/ls"
-#ELF_PATH = "/home/amruta/benign_binaries/grep"
-#ELF_PATH = "/home/amruta/benign_binaries/echo"
-#ELF_PATH = "/home/amruta/benign_binaries/ngrok"
-
-#ELF_PATH = "/home/amruta/benign_binaries/x86__64__lsb__unix-system-v__clang-3.8.0__O0__no-obf__unstripped__wget-1.16__wget"  
-#ELF_PATH = "/home/amruta/benign_binaries/x86__64__lsb__unix-system-v__clang-3.8.0__O1__no-obf__unstripped__acpid-2.0.31__sock.o"  
-#ELF_PATH = "/home/amruta/benign_binaries/x86__64__lsb__unix-system-v__clang-3.8.0__O1__no-obf__unstripped__coreutils-8.30__sha1sum"  
-#ELF_PATH = "/home/amruta/benign_binaries/x86__64__lsb__unix-system-v__clang-3.8.0__O1__no-obf__unstripped__util-linux-2.33__hexdump"  
-
-#ELF_PATH = "/home/amruta/benign_binaries/netcat-openbsd_1.229-1_amd64.deb"
-#ELF_PATH = "/home/amruta/benign_binaries/ngrok-stable-linux-amd64.zip"
-#ELF_PATH = "/home/amruta/benign_binaries/sendip_2.6-1_amd64.deb"
-#ELF_PATH = "/home/amruta/benign_binaries/tcpdump_4.99.6-2_amd64.deb"
-
 # Malicous binaries
-#ELF_PATH = "/home/amruta/malicious_binaries/1708621d7ed75e711d925cb96436fa5a5403c29c5b71b5159170114c532962b5.zip"
-#ELF_PATH = "/home/amruta/malicious_binaries/8d385e7b91c3cdd6c17a071f238602d4837d5deed5f213f93d02c15674367a10.zip" 
-#ELF_PATH = "/home/amruta/malicious_binaries/4771b1cb3f6e33666f523f9c46b2a3d3ae83f616531376bff964be7420d7f64c.zip" 
-#ELF_PATH = "/home/amruta/malicious_binaries/646ed823a06ae53ac9c9117f68520916e67468bfa0ef6412c35682743cab5819.zip"  
-#ELF_PATH = "/home/amruta/malicious_binaries/76f9f2ceca29648448664c901a5de2432ed044f2056aa32aeaa3791cb5f9c4b5.zip"  
-#ELF_PATH = "/home/amruta/malicious_binaries/6a6adc9d0b8be0da006c11564827258d086da534da452229865314446f36f563.zip"  
 ELF_PATH = "/home/amruta/malicious_binaries/3b5d8ab8a0e8335bf542bc9e7f7a79360b541c920263de8fa2deb6ea1def361d.zip"  
 
 
@@ -296,45 +276,46 @@ def display_summary(filepath, hashes, suspicious, total_hits):
 
 # ── Main Execution ────────────────────────────────────────────
 
-# 1. Compute hashes
-hashes = compute_hashes(ELF_PATH)
-display_hashes(hashes)
+if __name__ == "__main__":
+    # 1. Compute hashes
+    hashes = compute_hashes(ELF_PATH)
+    display_hashes(hashes)
 
-# 2. Extract suspicious imports
-suspicious = extract_suspicious_imports(ELF_PATH)
-total_hits = display_suspicious_imports(suspicious)
+    # 2. Extract suspicious imports
+    suspicious = extract_suspicious_imports(ELF_PATH)
+    total_hits = display_suspicious_imports(suspicious)
 
-# 3. Parse ELF file
-print("\n" + "=" * 60)
-print("PARSING ELF FILE")
-print("=" * 60)
+    # 3. Parse ELF file
+    print("\n" + "=" * 60)
+    print("PARSING ELF FILE")
+    print("=" * 60)
 
-(
-    elfindent, elf_headers, programs_headers, elf_sections,
-    symbols_tables, comments, note_sections, notes, dynamics, sections
-) = parse_elf(ELF_PATH)
+    (
+        elfindent, elf_headers, programs_headers, elf_sections,
+        symbols_tables, comments, note_sections, notes, dynamics, sections
+    ) = parse_elf(ELF_PATH)
 
-print(f"[+] ELF file parsed successfully: {ELF_PATH}")
+    print(f"[+] ELF file parsed successfully: {ELF_PATH}")
 
-# 4. Display ELF components
-display_elf_components(
-    elfindent, elf_headers, programs_headers,
-    symbols_tables, dynamics, sections, comments, notes
-)
+    # 4. Display ELF components
+    display_elf_components(
+        elfindent, elf_headers, programs_headers,
+        symbols_tables, dynamics, sections, comments, notes
+    )
 
-# 5. Display summary
-display_summary(ELF_PATH, hashes, suspicious, total_hits)
+    # 5. Display summary
+    display_summary(ELF_PATH, hashes, suspicious, total_hits)
 
-# 6. Export JSON report
-print("\n" + "=" * 60)
-print("EXPORTING JSON REPORT")
-print("=" * 60)
+    # 6. Export JSON report
+    print("\n" + "=" * 60)
+    print("EXPORTING JSON REPORT")
+    print("=" * 60)
 
-json_path, report = export_json(ELF_PATH, hashes, suspicious)
-print(f"[+] JSON report saved to: {json_path}\n")
-print(json.dumps(report, indent=4))
+    json_path, report = export_json(ELF_PATH, hashes, suspicious)
+    print(f"[+] JSON report saved to: {json_path}\n")
+    print(json.dumps(report, indent=4))
 
-# 7. Launch interactive CLI
-print("\n[*] Launching ElfAnalyzer CLI...\n")
-cli(elfindent, elf_headers, programs_headers, elf_sections,
-    symbols_tables, comments, notes, dynamics, sections)
+    # 7. Launch interactive CLI
+    print("\n[*] Launching ElfAnalyzer CLI...\n")
+    cli(elfindent, elf_headers, programs_headers, elf_sections,
+        symbols_tables, comments, notes, dynamics, sections)
