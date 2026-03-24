@@ -1,0 +1,50 @@
+{
+    "report_generated": "2026-03-23T21:22:41.839922",
+    "file": "/home/amruta/unzip/6a6adc9d0b8be0da006c11564827258d086da534da452229865314446f36f563.elf",
+    "filename": "6a6adc9d0b8be0da006c11564827258d086da534da452229865314446f36f563.elf",
+    "hashes": {
+        "MD5": "cc55aee0bd72fa97ab6806dd1cd92f9a",
+        "SHA1": "a311711b2b24f8a1660054092c319bef84b96cde",
+        "SHA256": "6a6adc9d0b8be0da006c11564827258d086da534da452229865314446f36f563",
+        "SHA512": "7f3fcf5d531a701999203ea3fd32c3b0cb28a67a35cd3c8f628c471c81d7a4260be064c7d9ba53d79395f31b9d9bb8976844604d63a299b34090f7e6f52445f8"
+    },
+    "suspicious_imports": {
+        "total_hits": 21,
+        "categories_flagged": 6,
+        "matches": {
+            "Shell Execution": [
+                "system",
+                "Interrupted system call",
+                "Too many open files in system",
+                "Read-only file system",
+                "Interrupted system call should be restarted"
+            ],
+            "Network": [
+                " HTTP/1.1",
+                "[http flood] headers: \"%s\"",
+                "http",
+                "GET %s HTTP/1.0",
+                "Communication error on send",
+                "Socket operation on non-socket",
+                "Protocol wrong type for socket",
+                "Socket type not supported",
+                "Cannot send after transport endpoint shutdown"
+            ],
+            "File Manipulation": [
+                "Invalid cross-device link",
+                "Link number out of range",
+                "Link has been severed",
+                "Attempting to link in too many shared libraries"
+            ],
+            "Process Manipulation": [
+                "Software caused connection abort"
+            ],
+            "Keylogging / Spying": [
+                "Read-only file system"
+            ],
+            "Persistence": [
+                ".init"
+            ]
+        }
+    }
+}

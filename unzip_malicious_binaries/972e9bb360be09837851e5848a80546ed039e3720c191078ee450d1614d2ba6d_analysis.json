@@ -1,0 +1,69 @@
+{
+    "report_generated": "2026-03-23T21:31:56.671756",
+    "file": "/home/amruta/unzip/972e9bb360be09837851e5848a80546ed039e3720c191078ee450d1614d2ba6d.elf",
+    "filename": "972e9bb360be09837851e5848a80546ed039e3720c191078ee450d1614d2ba6d.elf",
+    "hashes": {
+        "MD5": "c755bde98ff511a36e7a54d56916173e",
+        "SHA1": "d355a55a429221f7f2f07be15974bbab329048ab",
+        "SHA256": "972e9bb360be09837851e5848a80546ed039e3720c191078ee450d1614d2ba6d",
+        "SHA512": "8fca2ceba149231452ec21183df62786bc5ac362d7887722a27a52bd7ea9192f698d918524b2baa7cb9c4af95073d55664475784f2f227dea1afb17e3d8eb56d"
+    },
+    "suspicious_imports": {
+        "total_hits": 40,
+        "categories_flagged": 6,
+        "matches": {
+            "Shell Execution": [
+                "/etc/systemd/system",
+                "/etc/systemd/system/dbus-kworker.service",
+                "Description=System Service",
+                "Interrupted system call",
+                "Too many open files in system",
+                "Read-only file system",
+                "Interrupted system call should be restarted"
+            ],
+            "Network": [
+                "wget",
+                "curl",
+                "netcat",
+                "socket:[%lu]",
+                "wget http://%s/%s/%s -O %s",
+                "wget http://%s/%s -O %s",
+                "curl -o %s http://%s/%s/%s",
+                "curl -o %s http://%s/%s",
+                "/usr/sbin/wget",
+                "/usr/bin/wget",
+                "/usr/sbin/curl",
+                "/usr/bin/curl",
+                "Communication error on send",
+                "Socket operation on non-socket",
+                "Protocol wrong type for socket",
+                "Socket type not supported",
+                "Cannot send after transport endpoint shutdown"
+            ],
+            "File Manipulation": [
+                "Invalid cross-device link",
+                "Link number out of range",
+                "Link has been severed",
+                "Attempting to link in too many shared libraries"
+            ],
+            "Process Manipulation": [
+                "/sys/fs/cgroup/cgroup.kill",
+                "Software caused connection abort"
+            ],
+            "Keylogging / Spying": [
+                "Read-only file system"
+            ],
+            "Persistence": [
+                "/init",
+                "/etc/rc.local",
+                "/etc/systemd/system",
+                "/etc/systemd/system/dbus-kworker.service",
+                "/run/systemd/",
+                "init",
+                "systemd",
+                "systemd-timesyncd",
+                ".init"
+            ]
+        }
+    }
+}

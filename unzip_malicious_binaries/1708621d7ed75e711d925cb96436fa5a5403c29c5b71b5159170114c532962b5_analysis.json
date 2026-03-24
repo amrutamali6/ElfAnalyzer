@@ -1,0 +1,53 @@
+{
+    "report_generated": "2026-03-23T21:19:01.534937",
+    "file": "/home/amruta/unzip/1708621d7ed75e711d925cb96436fa5a5403c29c5b71b5159170114c532962b5.elf",
+    "filename": "1708621d7ed75e711d925cb96436fa5a5403c29c5b71b5159170114c532962b5.elf",
+    "hashes": {
+        "MD5": "57de77e810ead6ccd02d6421538f60e0",
+        "SHA1": "f82305a9cc5bf472ae2f0bdc651dd1c979757686",
+        "SHA256": "1708621d7ed75e711d925cb96436fa5a5403c29c5b71b5159170114c532962b5",
+        "SHA512": "afa65a2147cac44b24df64a80b669cbccbd6a941855f8474a5a87350c05228f149207aa5d737c4ec09ead6da8917a721d5bc356501e3f568e2d81e8afc5aba95"
+    },
+    "suspicious_imports": {
+        "total_hits": 24,
+        "categories_flagged": 6,
+        "matches": {
+            "Shell Execution": [
+                "system",
+                "Interrupted system call",
+                "Too many open files in system",
+                "Read-only file system",
+                "Interrupted system call should be restarted"
+            ],
+            "Network": [
+                " HTTP/1.1",
+                "[http flood] headers: \"%s\"",
+                "http",
+                "http://",
+                "GET %s HTTP/1.0",
+                "Communication error on send",
+                "Socket operation on non-socket",
+                "Protocol wrong type for socket",
+                "Socket type not supported",
+                "Cannot send after transport endpoint shutdown"
+            ],
+            "File Manipulation": [
+                "Invalid cross-device link",
+                "Link number out of range",
+                "Link has been severed",
+                "Attempting to link in too many shared libraries"
+            ],
+            "Process Manipulation": [
+                "[TEST] Simulating kill command for group: %s",
+                "Software caused connection abort"
+            ],
+            "Keylogging / Spying": [
+                "Read-only file system"
+            ],
+            "Persistence": [
+                "At^B1",
+                ".init"
+            ]
+        }
+    }
+}

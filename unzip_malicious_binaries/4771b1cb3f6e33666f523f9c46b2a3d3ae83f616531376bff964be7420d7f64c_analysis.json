@@ -1,0 +1,52 @@
+{
+    "report_generated": "2026-03-23T21:21:02.009790",
+    "file": "/home/amruta/unzip/4771b1cb3f6e33666f523f9c46b2a3d3ae83f616531376bff964be7420d7f64c.elf",
+    "filename": "4771b1cb3f6e33666f523f9c46b2a3d3ae83f616531376bff964be7420d7f64c.elf",
+    "hashes": {
+        "MD5": "9649be56437e7507780a451e18fca99d",
+        "SHA1": "19cbb2f4e21be13dcdfc9242dd76c0ce42e517d5",
+        "SHA256": "4771b1cb3f6e33666f523f9c46b2a3d3ae83f616531376bff964be7420d7f64c",
+        "SHA512": "f16228349fb3b704501fc42b4c7faf983ed33d266be7e37f33f9b60da27a0a124658d926b4c5a0647a0e53efef51e3d1ee8dd8ce2cdb471575a755338d26b7d6"
+    },
+    "suspicious_imports": {
+        "total_hits": 23,
+        "categories_flagged": 6,
+        "matches": {
+            "Shell Execution": [
+                "system",
+                "Interrupted system call",
+                "Too many open files in system",
+                "Read-only file system",
+                "Interrupted system call should be restarted"
+            ],
+            "Network": [
+                " HTTP/1.1",
+                "[http flood] headers: \"%s\"",
+                "http",
+                "http://",
+                "GET %s HTTP/1.0",
+                "Communication error on send",
+                "Socket operation on non-socket",
+                "Protocol wrong type for socket",
+                "Socket type not supported",
+                "Cannot send after transport endpoint shutdown"
+            ],
+            "File Manipulation": [
+                "Invalid cross-device link",
+                "Link number out of range",
+                "Link has been severed",
+                "Attempting to link in too many shared libraries"
+            ],
+            "Process Manipulation": [
+                "[TEST] Simulating kill command for group: %s",
+                "Software caused connection abort"
+            ],
+            "Keylogging / Spying": [
+                "Read-only file system"
+            ],
+            "Persistence": [
+                ".init"
+            ]
+        }
+    }
+}

