@@ -1,0 +1,57 @@
+{
+    "report_generated": "2026-03-25T20:53:32.462717",
+    "file": "/home/amruta/unzip/a20c9a9232db0bc4380701a32e1991f41f7d47b7736ca0a1d75bd4b7276c8151.elf",
+    "filename": "a20c9a9232db0bc4380701a32e1991f41f7d47b7736ca0a1d75bd4b7276c8151.elf",
+    "hashes": {
+        "MD5": "a135bff41f5ae95fbb64a73e94c76b58",
+        "SHA1": "f14178ba429f4397fe86963f7257d71ea9da1bd1",
+        "SHA256": "a20c9a9232db0bc4380701a32e1991f41f7d47b7736ca0a1d75bd4b7276c8151",
+        "SHA512": "3b703c7a0beaab7a6cf299800377edd5ad296a70ce9f5eb69af414934d02efff9c4dece7d4267b845ed0159c1def33612900937c7638308d9ba81a5c44d23e28"
+    },
+    "suspicious_imports": {
+        "total_hits": 26,
+        "categories_flagged": 7,
+        "matches": {
+            "Shell Execution": [
+                "Interrupted system call",
+                "Too many open files in system",
+                "Read-only file system",
+                "Interrupted system call should be restarted",
+                "RPC: Remote system error"
+            ],
+            "Network": [
+                "wget http://%s/%s/%s -O %s",
+                "curl -o %s http://%s/%s/%s",
+                "/usr/sbin/wget",
+                "/usr/bin/wget",
+                "/usr/sbin/curl",
+                "/usr/bin/curl",
+                "Communication error on send",
+                "Socket operation on non-socket",
+                "Protocol wrong type for socket",
+                "Socket type not supported",
+                "Cannot send after transport endpoint shutdown",
+                "Ht__get_myaddress: socket",
+                "RPC: Unable to send"
+            ],
+            "File Manipulation": [
+                "Invalid cross-device link",
+                "Link number out of range",
+                "Link has been severed",
+                "Attempting to link in too many shared libraries"
+            ],
+            "Obfuscation / Injection": [
+                "RPC: Can't encode arguments"
+            ],
+            "Process Manipulation": [
+                "Software caused connection abort"
+            ],
+            "Keylogging / Spying": [
+                "Read-only file system"
+            ],
+            "Persistence": [
+                ".init"
+            ]
+        }
+    }
+}

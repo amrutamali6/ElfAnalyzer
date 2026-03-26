@@ -1,0 +1,52 @@
+{
+    "report_generated": "2026-03-25T21:00:43.882857",
+    "file": "/home/amruta/unzip/0e5b7f850991749e9dffbdfedbc1351e126e28156abd3c038ec7bff7ee254a5d.elf",
+    "filename": "0e5b7f850991749e9dffbdfedbc1351e126e28156abd3c038ec7bff7ee254a5d.elf",
+    "hashes": {
+        "MD5": "6b1d18a979743b4a3216f4e75b3f720f",
+        "SHA1": "8fe02f673b00a1c8591037f705c8eeb23c7aaa41",
+        "SHA256": "0e5b7f850991749e9dffbdfedbc1351e126e28156abd3c038ec7bff7ee254a5d",
+        "SHA512": "5e9a5fdfbcd85242b48136e7ff56a340f6f433aabde4aa07f4b067556a679a58617163f86ea67de5783d9b598075411e3f38afb26d31dc856712d62f9ca9e64a"
+    },
+    "suspicious_imports": {
+        "total_hits": 23,
+        "categories_flagged": 6,
+        "matches": {
+            "Shell Execution": [
+                "Interrupted system call",
+                "Too many open files in system",
+                "Read-only file system",
+                "Interrupted system call should be restarted"
+            ],
+            "Network": [
+                "wget http://%s/%s/%s -O %s",
+                "curl -o %s http://%s/%s/%s",
+                "/usr/sbin/wget",
+                "/usr/bin/wget",
+                "/usr/sbin/curl",
+                "/usr/bin/curl",
+                "Communication error on send",
+                "Socket operation on non-socket",
+                "Protocol wrong type for socket",
+                "Socket type not supported",
+                "Cannot send after transport endpoint shutdown",
+                "__get_myaddress: socket"
+            ],
+            "File Manipulation": [
+                "Invalid cross-device link",
+                "Link number out of range",
+                "Link has been severed",
+                "Attempting to link in too many shared libraries"
+            ],
+            "Process Manipulation": [
+                "Software caused connection abort"
+            ],
+            "Keylogging / Spying": [
+                "Read-only file system"
+            ],
+            "Persistence": [
+                ".init"
+            ]
+        }
+    }
+}

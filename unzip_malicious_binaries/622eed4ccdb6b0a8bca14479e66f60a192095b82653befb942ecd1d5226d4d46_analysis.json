@@ -1,0 +1,60 @@
+{
+    "report_generated": "2026-03-25T20:49:23.730947",
+    "file": "/home/amruta/unzip/622eed4ccdb6b0a8bca14479e66f60a192095b82653befb942ecd1d5226d4d46.elf",
+    "filename": "622eed4ccdb6b0a8bca14479e66f60a192095b82653befb942ecd1d5226d4d46.elf",
+    "hashes": {
+        "MD5": "f993e304185afd4e6f911166bf599ad0",
+        "SHA1": "3689181623d00585cc6024dd502da0f576d96c40",
+        "SHA256": "622eed4ccdb6b0a8bca14479e66f60a192095b82653befb942ecd1d5226d4d46",
+        "SHA512": "699d687a7028674bd614626f6c21c83b2ac7c62b86cae1713bbaf984d41f123929d01622b425fa0d4f60c8691e3986eb89746fdc95f886557766675e39fd1f4e"
+    },
+    "suspicious_imports": {
+        "total_hits": 29,
+        "categories_flagged": 7,
+        "matches": {
+            "Shell Execution": [
+                "system",
+                "execl"
+            ],
+            "Network": [
+                "recv",
+                "connect",
+                "recvfrom",
+                "send",
+                "accept",
+                "sendto",
+                "socket",
+                "bind",
+                "inet_addr",
+                "listen",
+                "wget http://%s/%s/%s -O %s",
+                "curl -o %s http://%s/%s/%s",
+                "/usr/sbin/wget",
+                "/usr/bin/wget",
+                "/usr/sbin/curl",
+                "/usr/bin/curl"
+            ],
+            "File Manipulation": [
+                "chmod",
+                "unlink"
+            ],
+            "Memory Manipulation": [
+                "memcpy",
+                "memset",
+                "memmove"
+            ],
+            "Process Manipulation": [
+                "kill",
+                "fork",
+                "abort",
+                "signal"
+            ],
+            "Keylogging / Spying": [
+                "read"
+            ],
+            "Persistence": [
+                ".init"
+            ]
+        }
+    }
+}
