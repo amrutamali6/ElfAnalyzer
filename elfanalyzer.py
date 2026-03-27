@@ -31,14 +31,21 @@ from ElfAnalyzer import *
 #ELF_PATH = "/home/amruta/benign_binaries/sendip_2.6-1_amd64.deb"
 #ELF_PATH = "/home/amruta/benign_binaries/tcpdump_4.99.6-2_amd64.deb"
 
-# Malicous binaries
-#ELF_PATH = "/home/amruta/malicious_binaries/1708621d7ed75e711d925cb96436fa5a5403c29c5b71b5159170114c532962b5.zip"
-#ELF_PATH = "/home/amruta/malicious_binaries/8d385e7b91c3cdd6c17a071f238602d4837d5deed5f213f93d02c15674367a10.zip" 
-#ELF_PATH = "/home/amruta/malicious_binaries/4771b1cb3f6e33666f523f9c46b2a3d3ae83f616531376bff964be7420d7f64c.zip" 
-#ELF_PATH = "/home/amruta/malicious_binaries/646ed823a06ae53ac9c9117f68520916e67468bfa0ef6412c35682743cab5819.zip"  
-#ELF_PATH = "/home/amruta/malicious_binaries/76f9f2ceca29648448664c901a5de2432ed044f2056aa32aeaa3791cb5f9c4b5.zip"  
-#ELF_PATH = "/home/amruta/malicious_binaries/6a6adc9d0b8be0da006c11564827258d086da534da452229865314446f36f563.zip"  
-ELF_PATH = "/home/amruta/malicious_binaries/3b5d8ab8a0e8335bf542bc9e7f7a79360b541c920263de8fa2deb6ea1def361d.zip"  
+
+# Malicious binaries
+#ELF_PATH = "/home/amruta/unzip/1708621d7ed75e711d925cb96436fa5a5403c29c5b71b5159170114c532962b5.elf"
+#ELF_PATH = "/home/amruta/unzip/4771b1cb3f6e33666f523f9c46b2a3d3ae83f616531376bff964be7420d7f64c.elf"
+#ELF_PATH = "/home/amruta/unzip/646ed823a06ae53ac9c9117f68520916e67468bfa0ef6412c35682743cab5819.elf"
+#ELF_PATH = "/home/amruta/unzip/6a6adc9d0b8be0da006c11564827258d086da534da452229865314446f36f563.elf"
+#ELF_PATH = "/home/amruta/unzip/972e9bb360be09837851e5848a80546ed039e3720c191078ee450d1614d2ba6d.elf"
+#ELF_PATH = "/home/amruta/unzip/8d385e7b91c3cdd6c17a071f238602d4837d5deed5f213f93d02c15674367a10.elf"
+#ELF_PATH = "/home/amruta/unzip/622eed4ccdb6b0a8bca14479e66f60a192095b82653befb942ecd1d5226d4d46.elf"
+#ELF_PATH = "/home/amruta/unzip/a20c9a9232db0bc4380701a32e1991f41f7d47b7736ca0a1d75bd4b7276c8151.elf"
+#ELF_PATH = "/home/amruta/unzip/27d4a835b61920d0f81566fb5bafc61a3b50335d412611b9f9c7b91c434b0e0f.elf"
+ELF_PATH = "/home/amruta/unzip/0e5b7f850991749e9dffbdfedbc1351e126e28156abd3c038ec7bff7ee254a5d.elf"
+
+
+
 
 
 SUSPICIOUS_IMPORTS = {
